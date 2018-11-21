@@ -1,0 +1,12 @@
+<h2 md-dialog-title>Update Task</h2>
+
+<div md-dialog-content class="Modal">
+    <mat-form-field>
+        <input #taskName matInput placeholder="Course Description"  [(ngModel)]="data.taskName">
+    </mat-form-field>
+</div>
+
+<div md-dialog-actions>
+    <button class="mat-raised-button" (click)="dialogRef.close(null)">Close</button>
+    <button class="mat-raised-button mat-primary" (click)="dialogRef.close(taskName.value)">Save</button>
+</div>
